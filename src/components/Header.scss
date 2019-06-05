@@ -1,0 +1,106 @@
+#header {
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    padding: 30px;
+    z-index: 9999;
+
+    nav {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+
+            ul {
+                list-style: none;
+                display: flex;
+                padding: 0;
+
+                li {
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 7px 10px;
+                    transition: 0.2s;
+                    font-size: 0.9rem;
+                    user-select: none;
+                }
+
+                li:hover {
+                    background-color: #e50914
+                }
+            }
+
+        }
+
+        #nav-input {
+            position: relative;
+            width: 250px;
+            border: 3px solid rgba(158, 158, 158, 0.33);
+            border-radius: 30px;
+            padding: 7px 10px;
+            background-color: transparent;
+            outline: none;
+            color: white;
+            user-select: none;
+            transition: 0.4s;
+        }
+
+        #nav-input::placeholder {
+            color: white;
+        }
+
+        #nav-input:active,
+        #nav-input:focus {
+            width: 350px;
+            transition: 0.4s;
+            border-color: #e50914;
+        }
+
+        .user-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 4px solid #e50914;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+.Logo {
+    width: 151px;
+    height: 41px;
+    margin-right: 10px;
+    -webkit-transition: margin .125s ease;
+    transition: margin .125s ease;
+    margin-right: 25px;
+}
+
+.Logo svg {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.Logo svg path {
+    fill: #e50914;
+    -webkit-transition: fill .125s ease;
+    transition: fill .125s ease;
+}
+
+.Logo:hover {
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.Logo:hover svg path {
+    fill: #ffffff !important;
+}

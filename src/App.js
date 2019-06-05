@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Header from './components/Header'
+import Main from './components/Main'
+import TitleList from './components/TitleList';
+const  App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Main/>
+      <TitleList title="Top TV picks" url='discover/tv?sort_by=popularity.desc&page=1' />
+        <TitleList title="Trending now" url='discover/movie?sort_by=popularity.desc&page=1' />
+        <TitleList title="Most watched in Horror" url='genre/27/movies?sort_by=popularity.desc&page=1' />
+        <TitleList title="Sci-Fi greats" url='genre/878/movies?sort_by=popularity.desc&page=1' />
+        <TitleList title="Comedy magic" url='genre/35/movies?sort_by=popularity.desc&page=1' />
+    </>
   );
 }
 
